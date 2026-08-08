@@ -2,24 +2,24 @@ import { chromium } from 'playwright';
 import { test, expect } from '@playwright/test';
 import type { Browser, Page } from '@playwright/test';
 
-test.only('has title', async () => {
-  const browser:Browser = await chromium.launch({ headless: false });
-  const page:Page = await browser.newPage();
-  await page.goto('https://www.flipkart.com/');
-  await page.locator('.b3wTlE').first().click();
-  await page.mouse.move(10, 10);
-  // await expect(page.getByAltText('Login')).toBeVisible();
- await page.getByPlaceholder('Search for Products, Brands and More').first().fill('iphone');
-//  await page.getByText('iphone 17').selectOption('iphone 17');
-  await page.getByRole('link', { name: 'Electronics' }).click();
-  await page.getByText('Electronics', { exact: true }).click();
-  await page.getByRole('link', { name: 'New launches' }).click();
- await page.getByTitle('OPPO').click();
+// test.only('has title', async () => {
+//   const browser:Browser = await chromium.launch({ headless: false });
+//   const page:Page = await browser.newPage();
+//   await page.goto('https://www.flipkart.com/');
+//   await page.locator('.b3wTlE').first().click();
+//   await page.mouse.move(10, 10);
+//   // await expect(page.getByAltText('Login')).toBeVisible();
+//  await page.getByPlaceholder('Search for Products, Brands and More').first().fill('iphone');
+// //  await page.getByText('iphone 17').selectOption('iphone 17');
+//   await page.getByRole('link', { name: 'Electronics' }).click();
+//   await page.getByText('Electronics', { exact: true }).click();
+//   await page.getByRole('link', { name: 'New launches' }).click();
+//  await page.getByTitle('OPPO').click();
 
 
-  // Expect a title "to contain" a substring.
- // await expect(page).toHaveTitle(/Playwright/);
-});
+//   // Expect a title "to contain" a substring.
+//  // await expect(page).toHaveTitle(/Playwright/);
+// });
 
 test('get started link', async () => {
   const browser = await chromium.launch({ headless: false });
