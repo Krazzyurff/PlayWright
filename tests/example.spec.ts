@@ -22,7 +22,7 @@ import type { Browser, Page } from '@playwright/test';
 // });
 
 test('get started link', async () => {
-  const browser = await chromium.launch({ headless: false });
+  const browser = await chromium.launch();
   const page = await browser.newPage();
   await page.goto('https://playwright.dev/');
 
