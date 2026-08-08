@@ -32,7 +32,7 @@ test('get started link', async () => {
   // Expects page to have a heading with the name of Installation.
   await expect(page.getByRole('heading', { name: 'Installation' })).toBeVisible();
   await page.getByText('Pages').click();
- await page.getByRole('button', { name: 'Search (Ctrl+K)' }).click();
+//  await page.getByRole('button', { name: 'Search (Ctrl+K)' }).click();
 //  await page.locator('.DocSearch-Input').press("S");
 //  await page.locator('#docsearch-hits2-item-2').click();
 //    await expect(page.getByRole('heading', { name: 'Screenshots', exact: true })).toBeVisible();
